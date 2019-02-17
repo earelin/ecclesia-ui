@@ -1,3 +1,9 @@
 ### npm
 node_modules
+build
+reports
+coverage
+*.log
 
+### Visual Studio Code
+.sonarlint

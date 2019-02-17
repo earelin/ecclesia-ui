@@ -1,20 +1,32 @@
 {
-  "name": "ecclesia",
-  "version": "0.1.0",
+  "name": "ecclesia-ui",
+  "version": "1.0.0-alpha",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "preci-cpd:ci": "if [ ! -d reports ]; then mkdir reports; fi",
+    "cpd:ci": "jsinspect -r pmd src > reports/cpd.xml",
+    "preci-lint:ci": "if [ ! -d reports ]; then mkdir reports; fi",
+    "lint:ci": "eslint src/**/*.js --format checkstyle > reports/checkstyle.xml",
+    "test": "react-scripts test --coverage --reporters=default --reporters=jest-junit",
+    "eject": "react-scripts eject",
+    "clean": "rm -Rf build coverage reports"
+  },
   "dependencies": {
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-scripts": "2.1.5"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "jest-junit": "^6.3.0",
+    "jsinspect": "^0.12.7"
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "jest-junit": {
+    "outputDirectory": "./reports"
   },
   "browserslist": [
     ">0.2%",
