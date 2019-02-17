@@ -77,19 +77,5 @@ pipeline {
                 sh 'yarn build'
             }
         }
-
-//        stage('Publish snapshot') {
-//            when { branch "2.x.x" }
-//            steps {
-//
-//            }
-//        }
-//
-//        stage('Publish release') {
-//            when { buildingTag() }
-//            steps {
-//
-//            }
-//        }
     }
 }

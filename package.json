@@ -5,9 +5,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "preci-cpd:ci": "if [ ! -d reports ]; then mkdir reports; fi",
+    "precpd:ci": "if [ ! -d reports ]; then mkdir reports; fi",
     "cpd:ci": "jsinspect -r pmd src > reports/cpd.xml",
-    "preci-lint:ci": "if [ ! -d reports ]; then mkdir reports; fi",
+    "prelint:ci": "if [ ! -d reports ]; then mkdir reports; fi",
     "lint:ci": "eslint src/**/*.js --format checkstyle > reports/checkstyle.xml",
     "test": "react-scripts test --coverage --reporters=default --reporters=jest-junit",
     "eject": "react-scripts eject",
