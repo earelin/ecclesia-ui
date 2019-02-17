@@ -24,7 +24,7 @@ pipeline {
             post {
                 always {
                     recordIssues aggregatingResults: true, sourceCodeEncoding: 'UTF-8', tools: [
-                        checkstyle(pattern: 'reports/checkstyle.xml'),
+                        checkStyle(pattern: 'reports/checkstyle.xml'),
                         cpd(pattern: 'reports/cpd.xml'),
                     ]
                 }
