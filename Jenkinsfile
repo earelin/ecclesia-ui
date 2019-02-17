@@ -9,6 +9,11 @@ pipeline {
         CI = 'true'
     }
     stages {
+        stage('Dependencies intall') {
+            steps {
+                sh 'yarn'
+            }
+        }
         stage('Static code analysis') {
             steps {
                 sh '''
