@@ -77,7 +77,13 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Build deployement package') {
+            when { 
+                anyOf {
+                    branch "1.x.x"
+                    buildingTag()             
+                }
+            }
             steps {
                 sh 'yarn build'
             }
